@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="13.070995mm"
+   height="10.5833mm"
+   viewBox="0 0 13.070995 10.5833"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   sodipodi:docname="prompt.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="4.5373062"
+     inkscape:cx="34.381634"
+     inkscape:cy="13.223705"
+     inkscape:window-width="1920"
+     inkscape:window-height="1176"
+     inkscape:window-x="0"
+     inkscape:window-y="1360"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-71.569272,-109.6049)">
+    <g
+       aria-label="❯_"
+       id="text3968"
+       style="font-size:10.5833px;line-height:1.25;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';stroke-width:0.264583">
+      <path
+         d="m 71.569272,120.1882 3.472645,-5.29165 -3.472645,-5.29165 h 2.335768 l 3.410633,5.29165 -3.410633,5.29165 z"
+         style="font-family:'Fira Mono';-inkscape-font-specification:'Fira Mono, Normal'"
+         id="path33590" />
+      <path
+         d="m 79.348617,119.57189 h 5.29165 v -0.78316 h -5.29165 z"
+         style="font-family:'Fira Mono';-inkscape-font-specification:'Fira Mono, Normal'"
+         id="path33592" />
+    </g>
+  </g>
+</svg>
