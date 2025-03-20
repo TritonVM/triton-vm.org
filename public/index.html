@@ -12,28 +12,33 @@
         .button {
             background-color:   #559EFA;
             color:              #191919;
-            align-self:         center;
             text-align:         center;
             font-weight:        bold;
             font-size:          20px;
             padding:            10px;
-            margin-left:        5px;
-            margin-right:       5px;
             border-radius:      5px;
             text-decoration:    none;
+            min-width:          128px;
         }
+         .grid-container {
+             display: grid;
+             grid-template-columns: repeat(2, 1fr);
+             gap: 10px;
+             justify-items: center;
+             align-items: center;
+         }
     </style>
 </head>
 <body style="background-color: #191919; font-family: DM Sans,sans-serif">
 <div style="display: flex; margin-top:80px; height: 400px; justify-content: center; align-items: center">
     <img src="img/triton.svg" alt="Logo of Triton VM" style="margin: 30px; height: 300px">
     <div style="display: flex; flex-direction: column; justify-content: center; margin: 30px; min-height: 100%">
-        <h1 style="color: #559EFA; font-size: 60px; margin: 0; margin-left: 10px;">Triton VM</h1>
+        <h1 style="color: #559EFA; font-size: 60px; margin: 0 0 0 10px;">Triton VM</h1>
         <p style="color: #87FAFF; font-size: 30px; margin-left: 10px;">
             Recursively verifiable<br/>
             STARKs for Triton VM.
         </p>
-        <div style="display: flex; justify-content: center; align-items: center">
+        <div class="grid-container">
             <a href="https://github.com/TritonVM/triton-vm" class="button">
                 <img src="img/GitHub-Mark.svg" alt="GitHub Logo" height="20px" style="margin-bottom: -1px">
                 GitHub
@@ -45,6 +50,10 @@
             <a href="https://crates.io/crates/triton-tui" class="button">
                 <img src="img/prompt.svg" alt="shell prompt" height="20px" style="margin-bottom: -2px">
                 TUI
+            </a>
+            <a href="https://crates.io/crates/triton-cli" class="button">
+                <img src="img/prompt.svg" alt="shell prompt" height="20px" style="margin-bottom: -2px">
+                CLI
             </a>
         </div>
     </div>
