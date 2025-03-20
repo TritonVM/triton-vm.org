@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Triton VM</title>
     <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
@@ -9,6 +10,13 @@
     <link rel="manifest" href="./site.webmanifest">
     <link href="https://fonts.googleapis.com/css?family=DM%20Sans" rel="stylesheet"/>
     <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
         .button {
             background-color:   #559EFA;
             color:              #191919;
@@ -20,23 +28,49 @@
             text-decoration:    none;
             min-width:          128px;
         }
-         .grid-container {
-             display: grid;
-             grid-template-columns: repeat(2, 1fr);
-             gap: 10px;
-             justify-items: center;
-             align-items: center;
-         }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            justify-items: center;
+            align-items: center;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+        }
+        .logo {
+            margin: 30px;
+            height: 300px;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 30px;
+            min-height: 100%;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .logo {
+                margin-bottom: -70px;
+            }
+        }
     </style>
 </head>
 <body style="background-color: #191919; font-family: DM Sans,sans-serif">
-<div style="display: flex; margin-top:80px; height: 400px; justify-content: center; align-items: center">
-    <img src="img/triton.svg" alt="Logo of Triton VM" style="margin: 30px; height: 300px">
-    <div style="display: flex; flex-direction: column; justify-content: center; margin: 30px; min-height: 100%">
+<div class="container">
+    <img src="img/triton.svg" alt="Logo of Triton VM" class="logo">
+    <div class="content">
         <h1 style="color: #559EFA; font-size: 60px; margin: 0 0 0 10px;">Triton VM</h1>
-        <p style="color: #87FAFF; font-size: 30px; margin-left: 10px;">
-            Recursively verifiable<br/>
-            STARKs for Triton VM.
+        <p style="color: #87FAFF; font-size: 30px; margin: 10px 0 30px 10px;">
+            Recursively verifiable<br>
+            STARKs for Triton VM
         </p>
         <div class="grid-container">
             <a href="https://github.com/TritonVM/triton-vm" class="button">
