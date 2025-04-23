@@ -1,0 +1,55 @@
+# see also:
+# https://github.com/actions/upload-pages-artifact
+# https://github.com/actions/deploy-pages
+# https://github.com/actions/starter-workflows/blob/main/pages/mdbook.yml
+
+name: Build & Maybe Deploy
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build-maybe-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install mdBook
+        run: |
+          cargo install mdbook
+          cargo install mdbook-katex
+          cargo install mdbook-linkcheck
+
+      - name: Fetch Triton VM repository
+        uses: actions/checkout@v4
+        with:
+          repository: TritonVM/triton-vm
+          path: triton-vm
+
+      - name: Build Triton VM specification
+        run: |
+          mdbook build triton-vm/specification
+          mkdir -p ./spec
+          mv triton-vm/specification/book/html/* ./spec/
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - name: Deploy to GitHub Pages
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: actions/deploy-pages@v4
