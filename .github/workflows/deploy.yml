@@ -51,5 +51,7 @@ jobs:
           path: .
 
       - name: Deploy to GitHub Pages
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        if: >
+          (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
+          && github.ref == 'refs/heads/main'
         uses: actions/deploy-pages@v4
